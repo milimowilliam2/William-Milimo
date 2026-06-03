@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio Website Project — William</title>
+  <meta name="description" content="Project case study: responsive portfolio website built with modern HTML, CSS, and JavaScript.">
+  <meta property="og:title" content="Portfolio Website Project — William">
+  <meta property="og:description" content="Case study of a responsive portfolio website, designed for professional presentation and easy navigation.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">Portfolio Website</h1>
+      <nav class="navbar">
+        <button class="nav-toggle" aria-expanded="false">Menu</button>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Projects</a></li>
+          <li><a href="cyber-services.html">Cyber Services</a></li>
+          <li><a href="elearning.html">E-Learning</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container responsive-grid">
+      <div class="card">
+        <h2>Project Overview</h2>
+        <p>This case study showcases a portfolio website built to present skills, projects, and client-ready services. The design emphasizes clarity, responsive layouts, and easy navigation.</p>
+        <h3>Highlights</h3>
+        <ul>
+          <li>Responsive mobile-first design</li>
+          <li>Visual project cards with clear CTAs</li>
+          <li>SEO-friendly page metadata and structured content</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Role</h3>
+        <p>Designer, facilitator, content creator, and portfolio strategist.</p>
+        <h3>Tools</h3>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <h3>Gallery</h3>
+      <div class="gallery" id="gallery1">
+        <div class="slide active"><img src="assets/project1-1.svg" alt="Portfolio UI slide 1"></div>
+        <div class="slide"><img src="assets/project1-2.svg" alt="Portfolio UI slide 2"></div>
+        <div class="slide"><img src="assets/project1-3.svg" alt="Portfolio UI slide 3"></div>
+      </div>
+      <div class="gallery-controls">
+        <button data-gallery="gallery1" data-direction="prev">Previous</button>
+        <button data-gallery="gallery1" data-direction="next">Next</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <a class="btn" href="services.html">Back to Projects</a>
+      <a class="resume-link" href="resume.pdf" download>Download Resume</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">&copy; 2026 WILLIAM MILIMO</div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+    toggle && toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.gallery-controls button').forEach(button => {
+      button.addEventListener('click', () => {
+        const gallery = document.getElementById(button.dataset.gallery);
+        const slides = Array.from(gallery.querySelectorAll('.slide'));
+        const current = slides.findIndex(slide => slide.classList.contains('active'));
+        slides[current].classList.remove('active');
+        let nextIndex = current + (button.dataset.direction === 'next' ? 1 : -1);
+        if (nextIndex < 0) nextIndex = slides.length - 1;
+        if (nextIndex >= slides.length) nextIndex = 0;
+        slides[nextIndex].classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cyber & Online Services — WILLIAM MILIMO</title>
+  <meta name="description" content="Professional online and cyber security services from WILLIAM MILIMO. Services include remote support, security audits, and managed IT.">
+  <meta property="og:title" content="Cyber & Online Services — WILLIAM MILIMO">
+  <meta property="og:description" content="Remote IT support, network hardening, security audits and managed services. Contact via WhatsApp for quick response.">
+  <meta property="og:image" content="assets/profile.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">WILLIAM MILIMO</h1>
+      <nav class="navbar">
+        <button class="nav-toggle" aria-expanded="false">Menu</button>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Projects</a></li>
+          <li><a href="cyber-services.html">Cyber Services</a></li>
+          <li><a href="elearning.html">E-Learning</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Online & Cyber Services</h2>
+        <p class="section-note">Secure, reliable IT services delivered remotely and on-site. Fast WhatsApp support available for urgent requests.</p>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-meta"><div class="project-title">SHA Services</div><div class="project-tags">E-Service Support</div></div>
+            <p>Assistance with SHA registration, document submission, and online application tracking for secure service delivery.</p>
+            <div class="course-actions">
+              <a class="cyber-btn" href="contact.html">Request SHA Help</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-meta"><div class="project-title">KRA Services</div><div class="project-tags">Tax Support</div></div>
+            <p>Support for KRA PIN registration, tax returns, compliance queries, and online tax portal management.</p>
+            <div class="course-actions">
+              <a class="cyber-btn" href="contact.html">Request KRA Support</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-meta"><div class="project-title">Good Conduct Services</div><div class="project-tags">Certificate</div></div>
+            <p>Guidance and processing help for good conduct certificates, police clearance applications, and verification steps.</p>
+            <div class="course-actions">
+              <a class="cyber-btn" href="contact.html">Request Good Conduct</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-meta"><div class="project-title">Batch Numbers</div><div class="project-tags">Processing</div></div>
+            <p>Batch number issuance and tracking support for applications, registrations, and back-office service coordination.</p>
+            <div class="course-actions">
+              <a class="cyber-btn" href="contact.html">Request Batch Help</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-meta"><div class="project-title">Remote IT Support</div><div class="project-tags">Response: Same day</div></div>
+            <p>Remote troubleshooting, system maintenance, software installation, and configuration for individuals and small businesses.</p>
+            <div class="course-actions">
+              <a class="cyber-btn" href="contact.html">Request Service</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-meta"><div class="project-title">Security Audit & Hardening</div><div class="project-tags">Assessment: 1-2 days</div></div>
+            <p>Network and system security review, vulnerability scanning, and practical recommendations to harden your infrastructure.</p>
+            <div class="course-actions">
+              <a class="cyber-btn" href="contact.html">Request Audit</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-meta"><div class="project-title">Managed IT & Monitoring</div><div class="project-tags">Plans: Monthly</div></div>
+            <p>Ongoing managed services including monitoring, backups, updates, and priority support for small teams.</p>
+            <div class="course-actions">
+              <a class="cyber-btn" href="contact.html">Start Managed Plan</a>
+            </div>
+          </div>
+        </div>
+
+        <p class="section-note">For urgent requests, tap the WhatsApp button for fastest response. Standard enquiries can be sent via the contact form.</p>
+      </div>
+    </section>
+  </main>
+
+  <nav class="pager" aria-label="Page navigation">
+    <a class="prev" href="services.html">← Back</a>
+    <a class="next" href="elearning.html">Next →</a>
+  </nav>
+
+  <footer class="site-footer">
+    <div class="container">&copy; 2026 WILLIAM MILIMO</div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+    toggle && toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

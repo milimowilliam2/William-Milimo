@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Local Network Setup Project — William</title>
+  <meta name="description" content="Project case study covering secure local network design and implementation for small businesses.">
+  <meta property="og:title" content="Local Network Setup Project — William">
+  <meta property="og:description" content="Case study for secure network design, VLAN configuration, and monitoring setup.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">Local Network Setup</h1>
+      <nav class="navbar">
+        <button class="nav-toggle" aria-expanded="false">Menu</button>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Projects</a></li>
+          <li><a href="cyber-services.html">Cyber Services</a></li>
+          <li><a href="elearning.html">E-Learning</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container responsive-grid">
+      <div class="card">
+        <h2>Project Overview</h2>
+        <p>A secure local area network built for a small office environment. This project includes network topology, VLANs, firewall rules, and monitoring tools to keep systems reliable.</p>
+        <h3>Highlights</h3>
+        <ul>
+          <li>Router and switch configuration</li>
+          <li>Secure segmentation and access control</li>
+          <li>Network performance monitoring</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Role</h3>
+        <p>Network architect and implementation specialist.</p>
+        <h3>Tools</h3>
+        <ul>
+          <li>Networking hardware</li>
+          <li>Subnetting and VLAN planning</li>
+          <li>Monitoring dashboards</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <h3>Gallery</h3>
+      <div class="gallery" id="gallery2">
+        <div class="slide active"><img src="assets/project2-1.svg" alt="Network diagram slide 1"></div>
+        <div class="slide"><img src="assets/project2-2.svg" alt="Network setup slide 2"></div>
+        <div class="slide"><img src="assets/project2-3.svg" alt="Network configuration slide 3"></div>
+      </div>
+      <div class="gallery-controls">
+        <button data-gallery="gallery2" data-direction="prev">Previous</button>
+        <button data-gallery="gallery2" data-direction="next">Next</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <a class="btn" href="services.html">Back to Projects</a>
+      <a class="resume-link" href="resume.pdf" download>Download Resume</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">&copy; 2026 WILLIAM MILIMO</div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+    toggle && toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('open');
+    });
+    document.querySelectorAll('.gallery-controls button').forEach(button => {
+      button.addEventListener('click', () => {
+        const gallery = document.getElementById(button.dataset.gallery);
+        const slides = Array.from(gallery.querySelectorAll('.slide'));
+        const current = slides.findIndex(slide => slide.classList.contains('active'));
+        slides[current].classList.remove('active');
+        let nextIndex = current + (button.dataset.direction === 'next' ? 1 : -1);
+        if (nextIndex < 0) nextIndex = slides.length - 1;
+        if (nextIndex >= slides.length) nextIndex = 0;
+        slides[nextIndex].classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact WILLIAM MILIMO — ICT Portfolio</title>
+  <meta name="description" content="Contact WILLIAM MILIMO to book a consultation or request training in Web Development, Networking, and Computer Maintenance.">
+  <meta property="og:title" content="Contact WILLIAM MILIMO — ICT Portfolio">
+  <meta property="og:description" content="Send a message to WILLIAM MILIMO to discuss training, projects, or collaboration opportunities.">
+  <meta property="og:image" content="assets/profile.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">WILLIAM MILIMO</h1>
+      <nav class="navbar">
+        <button class="nav-toggle" aria-expanded="false">Menu</button>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Projects</a></li>
+          <li><a href="cyber-services.html">Cyber Services</a></li>
+          <li><a href="elearning.html">E-Learning</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="section-note">Send a message to request a consultation, project collaboration, or training plan.</p>
+        <form class="contact-form" id="contactForm" action="https://formsubmit.co/milimowilliam2@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New contact from portfolio site">
+          <input type="hidden" name="_captcha" value="false">
+          <label for="name">Name</label>
+          <input id="name" name="name" placeholder="Your name" required>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="How can I help you?" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-actions">
+          <p class="or-separator">OR</p>
+          <a class="btn whatsapp-link" href="https://wa.me/254798780150" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+        <p class="contact-status" id="formStatus" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <nav class="pager" aria-label="Page navigation">
+    <a class="prev" href="services.html">← Back</a>
+    <a class="next" href="index.html">Next →</a>
+  </nav>
+
+  <footer class="site-footer">
+    <div class="container">&copy; 2026 WILLIAM MILIMO</div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+    toggle && toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('open');
+    });
+
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+    form && form.addEventListener('submit', (e) => {
+      if (!form.checkValidity()) {
+        status.textContent = 'Please complete all fields before sending.';
+      } else {
+        status.textContent = 'Your message is being sent…';
+      }
+    });
+  </script>
+</body>
+</html>

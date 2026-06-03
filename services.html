@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — WILLIAM MILIMO Portfolio</title>
+  <meta name="description" content="Explore WILLIAM MILIMO's technical projects in web development, networking, and computer maintenance.">
+  <meta property="og:title" content="Projects — WILLIAM MILIMO Portfolio">
+  <meta property="og:description" content="Explore ICT case studies showcasing skills in web development, networking, and maintenance.">
+  <meta property="og:image" content="assets/project1-1.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">WILLIAM MILIMO</h1>
+      <nav class="navbar">
+        <button class="nav-toggle" aria-expanded="false">Menu</button>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Projects</a></li>
+          <li><a href="cyber-services.html">Cyber Services</a></li>
+          <li><a href="elearning.html">E-Learning</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div style="margin-bottom:12px">
+          <button class="badge" data-filter="all">All</button>
+          <button class="badge" data-filter="web">Web</button>
+          <button class="badge" data-filter="network">Networking</button>
+          <button class="badge" data-filter="maintenance">Maintenance</button>
+        </div>
+
+        <div class="projects-grid" id="projects">
+          <div class="project-card" data-tags="web">
+            <div class="project-thumb"></div>
+            <div class="project-meta"><div class="project-title">Portfolio Website</div><div class="project-tags">Web</div></div>
+            <p>Responsive portfolio and showcase.</p>
+            <a href="#" data-id="p1" class="open-project">Details →</a>
+          </div>
+
+          <div class="project-card" data-tags="network">
+            <div class="project-thumb"></div>
+            <div class="project-meta"><div class="project-title">Local Network Setup</div><div class="project-tags">Networking</div></div>
+            <p>Small business network deployment.</p>
+            <a href="#" data-id="p2" class="open-project">Details →</a>
+          </div>
+
+          <div class="project-card" data-tags="maintenance">
+            <div class="project-thumb"></div>
+            <div class="project-meta"><div class="project-title">PC Repair Toolkit</div><div class="project-tags">Maintenance</div></div>
+            <p>Tools and workflow for diagnostics.</p>
+            <a href="#" data-id="p3" class="open-project">Details →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal" id="projectModal" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+          <button class="modal-close" id="modalClose">×</button>
+          <div id="modalBody"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const projects = {
+      p1: {title:'Portfolio Website',desc:'Built a responsive portfolio site using HTML, CSS and vanilla JS. Features: project showcase, contact form, and responsive layout.'},
+      p2: {title:'Local Network Setup',desc:'Designed and configured a secure local network for a small business including routing, VLANs, and monitoring.'},
+      p3: {title:'PC Repair Toolkit',desc:'Created toolkit, diagnostic checklists, and repair guides to speed up hardware troubleshooting.'}
+    };
+
+    // Filter
+    document.querySelectorAll('[data-filter]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const f = btn.getAttribute('data-filter');
+        document.querySelectorAll('#projects .project-card').forEach(card=>{
+          const tags = card.getAttribute('data-tags')||'';
+          card.style.display = (f==='all' || tags.includes(f)) ? '' : 'none';
+        });
+      });
+    });
+
+    // Modal open
+    document.querySelectorAll('.open-project').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const id = a.dataset.id;
+        const m = document.getElementById('projectModal');
+        document.getElementById('modalBody').innerHTML = `<h3>${projects[id].title}</h3><p>${projects[id].desc}</p>`;
+        m.classList.add('open'); m.setAttribute('aria-hidden','false');
+      });
+    });
+    document.getElementById('modalClose').addEventListener('click', ()=>{document.getElementById('projectModal').classList.remove('open');});
+  </script>
+
+  <nav class="pager" aria-label="Page navigation">
+    <a class="prev" href="about.html">← Back</a>
+    <a class="next" href="contact.html">Next →</a>
+  </nav>
+
+  <footer class="site-footer">
+    <div class="container">&copy; 2026 WILLIAM MILIMO</div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+    toggle && toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

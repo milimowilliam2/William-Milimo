@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frame View — WILLIAM MILIMO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="frame-page">
+  <header class="frame-header">
+    <div class="container header-inner">
+      <h1 class="site-title">WILLIAM MILIMO</h1>
+      <nav class="navbar">
+        <button class="nav-toggle" aria-expanded="false">Menu</button>
+        <ul class="nav-list">
+          <li><a href="#" data-src="index.html">Home</a></li>
+          <li><a href="#" data-src="about.html">About</a></li>
+          <li><a href="#" data-src="services.html">Projects</a></li>
+          <li><a href="#" data-src="cyber-services.html">Cyber Services</a></li>
+          <li><a href="#" data-src="elearning.html">E-Learning</a></li>
+          <li><a href="#" data-src="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="frame-container">
+    <iframe id="viewer" src="index.html" title="WILLIAM MILIMO viewer"></iframe>
+  </div>
+
+  <div class="frame-toolbar">
+    <button id="prevBtn">← Back</button>
+    <button id="nextBtn">Next →</button>
+  </div>
+
+  <script>
+    const pages = ['index.html','about.html','services.html','cyber-services.html','elearning.html','contact.html'];
+    let idx = 0;
+    const viewer = document.getElementById('viewer');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    function loadIndex(i){
+      idx = (i + pages.length) % pages.length;
+      viewer.src = pages[idx];
+    }
+
+    prevBtn.addEventListener('click', ()=> loadIndex(idx - 1));
+    nextBtn.addEventListener('click', ()=> loadIndex(idx + 1));
+
+    // Nav links set iframe src
+    document.querySelectorAll('.nav-list a').forEach(a=>{
+      a.addEventListener('click',(e)=>{
+        e.preventDefault();
+        const src = a.dataset.src;
+        const i = pages.indexOf(src);
+        if(i>=0) loadIndex(i);
+      });
+    });
+
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+    toggle && toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

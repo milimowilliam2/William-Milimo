@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume — WILLIAM MILIMO</title>
+  <meta name="description" content="WILLIAM MILIMO's printable resume for ICT training, web development, networking, and maintenance.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">Resume</h1>
+      <nav class="navbar">
+        <button class="nav-toggle" aria-expanded="false">Menu</button>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+           <li><a href="services.html">Projects</a></li>
+           <li><a href="cyber-services.html">Cyber Services</a></li>
+          <li><a href="elearning.html">E-Learning</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container resume-details">
+      <h2>WILLIAM MILIMO</h2>
+      <p class="section-note">Experienced ICT trainer and facilitator with a portfolio of web, networking, and maintenance projects.</p>
+      <h3>Contact</h3>
+      <p>Email: milimowilliam2@gmail.com<br>WhatsApp: +254 798 780 150</p>
+
+      <h3>Professional Experience</h3>
+      <ul>
+        <li>
+          <strong>ICT Trainer — WILLIAM MILIMO</strong> (2018–Present)
+          <div>Designs and delivers hands-on training programmes in web development, network fundamentals, and computer maintenance. Prepares practical labs, assessments, and real-world projects that prepare learners for entry-level ICT roles.</div>
+        </li>
+        <li>
+          <strong>Freelance Web & IT Consultant</strong>
+          <div>Provides small businesses and educational clients with website development, local network setup, and on-site troubleshooting services.</div>
+        </li>
+      </ul>
+
+      <h3>Education & Certifications</h3>
+      <ul>
+        <li>
+          <strong>ICT Diploma</strong> — Mtili TTI
+          <div>Comprehensive diploma covering software fundamentals, networking, system administration, and practical computer maintenance.</div>
+        </li>
+        <li>
+          <strong>Diploma in Education (Technical Trainer)</strong> — KSTVET (currently undertaking)
+          <div>Focused on vocational pedagogy, curriculum design, assessment methods, and competency-based training for technical subjects.</div>
+        </li>
+        <li>
+          <strong>Network+ (training course)</strong>
+          <div>Training in network protocols, routing, switching basics, and troubleshooting methodologies.</div>
+        </li>
+      </ul>
+
+      <h3>Key Skills</h3>
+      <ul>
+        <li>Web Development: HTML, CSS, JavaScript — building responsive, accessible sites</li>
+        <li>Networking: LAN design, basic routing, network troubleshooting</li>
+        <li>Computer Maintenance: diagnostics, repairs, preventive maintenance</li>
+        <li>Training & Assessment: curriculum development, practical labs, learner evaluation</li>
+      </ul>
+      <div class="resume-download">
+        <a class="resume-link" href="resume.pdf" download>Download PDF Resume</a>
+        <a class="btn" href="index.html">Back to Portfolio</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">&copy; 2026 WILLIAM MILIMO</div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+    toggle && toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WILLIAM MILIMO | ICT Portfolio</title>
+    <meta name="description" content="WILLIAM MILIMO is an ICT trainer and facilitator showcasing Web Development, Networking, and Computer Maintenance projects.">
+    <meta property="og:title" content="WILLIAM MILIMO | ICT Portfolio">
+    <meta property="og:description" content="Professional portfolio for ICT training, web development, networking, and computer maintenance projects.">
+    <meta property="og:image" content="assets/profile.svg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "WILLIAM MILIMO",
+    "jobTitle": "ICT Trainer & Facilitator",
+      "url": "index.html",
+      "knowsAbout": ["Web Development","Networking Fundamentals","Computer Maintenance"]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="site-title">WILLIAM MILIMO</h1>
+            <nav class="navbar">
+                <button class="nav-toggle" aria-expanded="false">Menu</button>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Projects</a></li>
+                    <li><a href="cyber-services.html">Cyber Services</a></li>
+                    <li><a href="elearning.html">E-Learning</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-portfolio">
+            <div class="container hero-inner">
+                <div class="hero-left">
+                    <div class="hero-title-row">
+                        <img class="hero-icon" src="assets/profile.svg" alt="WILLIAM MILIMO portrait">
+                        <h1>WILLIAM MILIMO — ICT Trainer & Facilitator</h1>
+                    </div>
+                    <p class="lead">I build practical projects and teach others how to launch careers in Web Development, Networking, and Computer Maintenance.</p>
+                    <div class="cta-row">
+                        <a class="btn" href="services.html">View Projects</a>
+                        <a class="badge" href="contact.html">Book a Consultation</a>
+                    </div>
+
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="label">Web Development</div>
+                            <div class="bar"><i style="width:85%"></i></div>
+                        </div>
+                        <div class="skill">
+                            <div class="label">Networking</div>
+                            <div class="bar"><i style="width:72%"></i></div>
+                        </div>
+                        <div class="skill">
+                            <div class="label">Computer Maintenance</div>
+                            <div class="bar"><i style="width:80%"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-thumb"><img src="assets/project1-1.svg" alt="Portfolio Website"></div>
+                        <div class="project-meta">
+                            <div class="project-title">Portfolio Website</div>
+                            <div class="project-tags">Web</div>
+                        </div>
+                        <p>Responsive portfolio built to showcase UX, case studies, and contact gateways.</p>
+                        <a href="project1.html">View Project →</a>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-thumb"><img src="assets/project2-1.svg" alt="Local Network Setup"></div>
+                        <div class="project-meta">
+                            <div class="project-title">Local Network Setup</div>
+                            <div class="project-tags">Networking</div>
+                        </div>
+                        <p>Small business network design with secure VLANs and monitoring workflows.</p>
+                        <a href="project2.html">View Project →</a>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-thumb"><img src="assets/project3-1.svg" alt="PC Repair Toolkit"></div>
+                        <div class="project-meta">
+                            <div class="project-title">PC Repair Toolkit</div>
+                            <div class="project-tags">Maintenance</div>
+                        </div>
+                        <p>Toolkit for diagnosing and repairing hardware and software issues quickly.</p>
+                        <a href="project3.html">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>Online Learning</h2>
+                <p>Level up with structured courses designed for ICT learners. Each module includes demonstrations, quizzes, and practical case studies.</p>
+                <div class="cta-row">
+                    <a class="btn" href="elearning.html">Explore E-Learning</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>Testimonials</h2>
+                <div id="testimonials" class="testimonials">
+                    <div class="testimonial">"WILLIAM MILIMO's training helped me land my first job." — A. Student</div>
+                    <div class="testimonial">"Clear, practical, and focused on real work." — B. Client</div>
+                </div>
+
+                <form id="testimonialForm" class="testimonial-form" aria-label="Share a testimonial">
+                    <label for="t-name">Your name</label>
+                    <input id="t-name" name="name" placeholder="Your name" required>
+                    <label for="t-message">Testimonial</label>
+                    <textarea id="t-message" name="message" placeholder="Share your experience" required></textarea>
+                    <button type="submit" class="testimonial-submit">Share Testimonial</button>
+                    <p class="form-note" id="testimonialStatus" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <nav class="pager" aria-label="Page navigation">
+        <a class="prev" href="contact.html">← Back</a>
+        <a class="next" href="about.html">Next →</a>
+    </nav>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 WILLIAM MILIMO</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const navList = document.querySelector('.nav-list');
+        toggle && toggle.addEventListener('click', () => {
+            const expanded = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', String(!expanded));
+            navList.classList.toggle('open');
+        });
+
+        // Testimonials: client-side add and localStorage persistence
+        (function(){
+            const form = document.getElementById('testimonialForm');
+            const list = document.getElementById('testimonials');
+            const status = document.getElementById('testimonialStatus');
+            const storageKey = 'wm_testimonials_v1';
+
+            function renderTestimonial(item){
+                const el = document.createElement('div');
+                el.className = 'testimonial';
+                el.innerHTML = `"${escapeHtml(item.message)}" <span class="testimonial-author">— ${escapeHtml(item.name)}</span>`;
+                list.insertBefore(el, list.firstChild);
+            }
+
+            function escapeHtml(str){
+                return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+            }
+
+            function load(){
+                try{
+                    const raw = localStorage.getItem(storageKey);
+                    if(!raw) return;
+                    const arr = JSON.parse(raw);
+                    arr.forEach(renderTestimonial);
+                }catch(e){console.warn('Could not load testimonials', e)}
+            }
+
+            function save(item){
+                try{
+                    const raw = localStorage.getItem(storageKey);
+                    const arr = raw ? JSON.parse(raw) : [];
+                    arr.unshift(item);
+                    localStorage.setItem(storageKey, JSON.stringify(arr.slice(0,20)));
+                }catch(e){console.warn('Could not save testimonial', e)}
+            }
+
+            if(form){
+                form.addEventListener('submit', (e)=>{
+                    e.preventDefault();
+                    const name = form.querySelector('#t-name').value.trim();
+                    const message = form.querySelector('#t-message').value.trim();
+                    if(!name || !message){
+                        status.textContent = 'Please provide both name and testimonial.';
+                        return;
+                    }
+                    const item = {name, message, created: Date.now()};
+                    renderTestimonial(item);
+                    save(item);
+                    form.reset();
+                    status.textContent = 'Thanks — your testimonial has been shared.';
+                    setTimeout(()=> status.textContent = '', 4000);
+                });
+            }
+
+            load();
+        })();
+    </script>
+</body>
+</html>

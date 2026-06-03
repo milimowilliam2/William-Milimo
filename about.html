@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About WILLIAM MILIMO — ICT Portfolio</title>
+  <meta name="description" content="About WILLIAM MILIMO, an ICT trainer and facilitator specializing in web development, networking, and computer maintenance.">
+  <meta property="og:title" content="About WILLIAM MILIMO — ICT Portfolio">
+  <meta property="og:description" content="Learn about WILLIAM MILIMO's experience, skills, and training background.">
+  <meta property="og:image" content="assets/profile.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">WILLIAM MILIMO</h1>
+      <nav class="navbar">
+        <button class="nav-toggle" aria-expanded="false">Menu</button>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Projects</a></li>
+          <li><a href="cyber-services.html">Cyber Services</a></li>
+          <li><a href="elearning.html">E-Learning</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>I'm William — an ICT trainer and facilitator with years of experience delivering hands-on courses and real projects. I focus on web development, network engineering fundamentals, and practical computer maintenance.</p>
+
+        <h3>Experience</h3>
+        <ul>
+          <li>ICT Trainer — WILLIAM MILIMO (2018–Present)</li>
+          <li>Freelance Web & IT Trainer — Clients across education & small business</li>
+        </ul>
+
+        <h3>Education & Certifications</h3>
+        <ul>
+          <li>Graduate — ICT Diploma, Mtili TTI</li>
+          <li>Currently undertaking: Diploma in Education (Technical Trainer), KSTVET</li>
+        </ul>
+
+        <h3>Skills</h3>
+        <div class="skills">
+          <div class="skill"><div class="label">HTML/CSS</div><div class="bar"><i style="width:90%"></i></div></div>
+          <div class="skill"><div class="label">JavaScript</div><div class="bar"><i style="width:75%"></i></div></div>
+          <div class="skill"><div class="label">Networking</div><div class="bar"><i style="width:72%"></i></div></div>
+        </div>
+
+        <p><a class="resume-link" href="resume.html">Download full resume</a></p>
+      </div>
+    </section>
+  </main>
+
+  <nav class="pager" aria-label="Page navigation">
+    <a class="prev" href="index.html">← Back</a>
+    <a class="next" href="services.html">Next →</a>
+  </nav>
+
+  <footer class="site-footer">
+    <div class="container">&copy; 2026 WILLIAM MILIMO</div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+    toggle && toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
